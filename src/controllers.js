@@ -6,7 +6,7 @@ const modelo =  mongoose.model('teste');
 exports.pegar =  async (req, res, next) => {
     try {  
         const dados = await modelo.find();
-        return res.json({dados})
+        return res.json(dados)
 
     } catch (err) {
         next(err);
