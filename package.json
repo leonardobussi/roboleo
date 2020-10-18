@@ -1,0 +1,29 @@
+{
+  "name": "services",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardobussi/quase-netflix.git"
+  },
+  "author": "leonardo bussi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leonardobussi/quase-netflix/issues"
+  },
+  "homepage": "https://github.com/leonardobussi/quase-netflix#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
