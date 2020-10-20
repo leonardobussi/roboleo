@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
+const mongoosePaginate = require('mongoose-paginate')
 
-const schema = mongoose.Schema;
-
-const teste = new schema({
+const teste = new mongoose.Schema({
     posicao: {
         type: Number,
         required: true,
@@ -30,5 +29,7 @@ const teste = new schema({
     },
     
 });
+
+teste.plugin(mongoosePaginate);
 
 module.exports = mongoose.model('teste', teste);

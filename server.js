@@ -11,7 +11,8 @@ app.use(bp.json());
 app.use(bp.urlencoded({extended: false}));
 
 app.post('/', controller.subir);
-app.get('/', controller.pegar);
+app.get('/', controller.pegarTodos);
+app.get('/page', controller.pegarPorPage);
 
 module.exports = app;
 

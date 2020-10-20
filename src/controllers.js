@@ -3,9 +3,19 @@ const mongoose = require('mongoose');
 const modelo =  mongoose.model('teste');
 
 
-exports.pegar =  async (req, res, next) => {
+exports.pegarTodos =  async (req, res, next) => {
     try {  
         const dados = await modelo.find();
+        return res.json(dados)
+
+    } catch (err) {
+        next(err);
+    }
+}
+exports.pegarPorPage =  async (req, res, next) => {
+    try {  
+        const { page = 1 } = req.query
+        const dados = await modelo.paginate({}, { page, limit: 10 })
         return res.json(dados)
 
     } catch (err) {
