@@ -17,9 +17,8 @@ exports.pegarPorPage =  async (req, res, next) => {
         const { page = 1 } = req.query
         const dados = await modelo.paginate({}, { page, limit: 10 })
         const dadosDocs = dados.docs
-
         console.log(dadosDocs)
-        return res.json(dadosDocs)
+        return res.json(dados)
 
     } catch (err) {
         next(err);
