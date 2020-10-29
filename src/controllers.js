@@ -1,6 +1,6 @@
 require('./models');
 const mongoose = require('mongoose');
-const modelo =  mongoose.model('teste');
+const modelo =  mongoose.model('matri');
 
 
 exports.pegarTodos =  async (req, res, next) => {
@@ -17,7 +17,7 @@ exports.pegarPorPage =  async (req, res, next) => {
         const { page = 1 } = req.query
         const dados = await modelo.paginate({}, { page, limit: 10 })
         const dadosDocs = dados.docs
-        console.log(dadosDocs)
+        //console.log(dadosDocs)
         return res.json(dados)
 
     } catch (err) {
