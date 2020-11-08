@@ -10,9 +10,9 @@ app.use(cors())
 app.use(bp.json());
 app.use(bp.urlencoded({extended: false}));
 
-app.post('/', controller.subir);
+//app.post('/', controller.subir);
 app.get('/', controller.pegarTodos);
-app.get('/page', controller.pegarPorPage);
+//app.get('/page', controller.pegarPorPage);
 
 module.exports = app;
 
@@ -23,6 +23,6 @@ app.listen(port, (err) => {
     if(err) {
         console.log('==> [-]  falha na aplicação');
     } else {
-        console.log('==> [+] aplicação funcionando [localhost:3000]');
+        console.log(`==> [+] aplicação funcionando [localhost: ${port}]`);
     }
 });
